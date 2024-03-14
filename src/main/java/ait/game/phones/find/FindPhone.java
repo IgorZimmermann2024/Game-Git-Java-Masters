@@ -1,16 +1,23 @@
 package ait.game.phones.find;
 
-public class FindPhone {
+import ait.game.phones.phone.CellPhone;
 
+public class FindPhone {
+    public static void main(String[] args) {
+        CellPhone cellPhone = new CellPhone();
+        findPhoneByModel(cellPhone.phonesArray(), "iPhone 14Pro");
     }
-            //  CellPhone[] allPhone--> Класс с объектом Телефон //  modelPhone --> Вводные данные Модели телефона
-    public static void findPhoneByModel(CellPhone[] allPhone ,String modelPhone) {
-        for (String phone : allPhone) {
-            if (modelPhone.equals(phone)) {
-                System.out.println();
-            } else {
-                System.out.println("Phone not found!");
+
+    public static void findPhoneByModel(CellPhone[] allPhone, String modelPhone) {
+        boolean check = false;
+        for (CellPhone phone : allPhone) {
+            if (modelPhone.equals(phone.getModel())) {
+                System.out.println(phone.toString());
+                check = true;
             }
+        }
+        if (!check) {
+            System.out.println("Phone not found!");
         }
     }
 }
