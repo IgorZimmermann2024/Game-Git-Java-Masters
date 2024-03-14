@@ -5,6 +5,10 @@ public class CellPhone {
     private String manufacturer;
     private double price;
 
+    public CellPhone(){
+
+    }
+
     public CellPhone(String model,String manufacturer,double price){
         this.model = model;
         this.manufacturer =manufacturer;
