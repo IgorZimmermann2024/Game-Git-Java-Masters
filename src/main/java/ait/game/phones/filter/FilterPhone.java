@@ -1,9 +1,9 @@
 package ait.game.phones.filter;
 import java.util.Arrays;
-
+import  java.util.List;
 
 public class FilterPhone {
-    private static ait.game.phones.phone.CellPhone[] filteredPhones;
+    public static ait.game.phones.phone.CellPhone[] filteredPhones;
 
     /*
         ### Задача 3: Фильтрация телефонов по ценовому диапазону
@@ -17,7 +17,8 @@ public class FilterPhone {
     цена которых находится в указанном диапазоне.
     
          */
-    public static java.util.List<ait.game.phones.phone.CellPhone>filterPhonesByPriceRange(double minPrice, double maxPrice, ait.game.phones.phone.CellPhone[] phones) {
+
+    public java.util.List<ait.game.phones.phone.CellPhone> filterPhonesByPriceRange(double minPrice, double maxPrice, ait.game.phones.phone.CellPhone[] phones) {
         java.util.List<ait.game.phones.phone.CellPhone> filteredPhones = new java.util.ArrayList<>();
         for (ait.game.phones.phone.CellPhone phone : phones){
             double price = phone.getPrice();
@@ -33,10 +34,17 @@ public class FilterPhone {
 
 
 
+
+    }
+    public void sortPhonesByPrice(CellPhone[] phones) {
+        Arrays.sort(phones, Comparator.comparingDouble(phone -> phone.price));
     }
 
 
 }
+
+
+
 
 
 

@@ -1,5 +1,7 @@
 package ait.game.phones.phone;
-
+/*
+создали класс CellPhone с переменными: модели, производителя и цены.
+ */
 public class CellPhone {
     private String model;
     private String manufacturer;
@@ -36,6 +38,10 @@ public class CellPhone {
                 ", price=" + price +
                 '}';
     }
+
+    /*
+    массив с информацией объектов
+     */
     public CellPhone[] phonesArray(){
         CellPhone[] arrayCallPhone = new CellPhone[5];
         arrayCallPhone[0] = new CellPhone("Galaxy A15", "Samsung",179);
@@ -45,7 +51,9 @@ public class CellPhone {
         arrayCallPhone[4] = new CellPhone("Refurbished Pixel 7 Pro", "Google",849);
         return arrayCallPhone;
     }
-
+     /*
+     выводим информацию из массивов о телефонах
+      */
     public void phonesInfo(CellPhone[] arrayPhones){
         for(CellPhone phone : arrayPhones){
             System.out.println(phone.toString());
