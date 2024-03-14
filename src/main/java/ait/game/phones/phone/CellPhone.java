@@ -1,4 +1,4 @@
-package ait.game.phones.classCellPhone;
+package ait.game.phones.phone;
 
 public class CellPhone {
     private String model;
@@ -10,6 +10,7 @@ public class CellPhone {
         this.manufacturer =manufacturer;
         this.price = price;
     }
+
 
     public String getModel() {
         return model;
@@ -30,5 +31,20 @@ public class CellPhone {
                 ", manufacturer='" + manufacturer + '\'' +
                 ", price=" + price +
                 '}';
+    }
+    public CellPhone[] phonesArray(){
+        CellPhone[] arrayCallPhone = new CellPhone[5];
+        arrayCallPhone[0] = new CellPhone("Galaxy A15", "Samsung",179);
+        arrayCallPhone[1] = new CellPhone("Readmi 13C", "Xiaomi",115);
+        arrayCallPhone[2] = new CellPhone("iPhone 14Pro", "Apple",1049);
+        arrayCallPhone[3] = new CellPhone("edge40", "Motorola",345);
+        arrayCallPhone[4] = new CellPhone("Refurbished Pixel 7 Pro", "Google",849);
+        return arrayCallPhone;
+    }
+
+    public void phonesInfo(CellPhone[] arrayPhones){
+        for(CellPhone phone : arrayPhones){
+            System.out.println(phone.toString());
+        }
     }
 }
