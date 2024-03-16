@@ -1,4 +1,5 @@
 package ait.game.phones.phone;
+
 /*
 создали класс CellPhone с переменными: модели, производителя и цены.
  */
@@ -7,16 +8,14 @@ public class CellPhone {
     private String manufacturer;
     private double price;
 
-    public CellPhone(){
-
+    public CellPhone() {
     }
 
-    public CellPhone(String model,String manufacturer,double price){
+    public CellPhone(String model, String manufacturer, double price) {
         this.model = model;
-        this.manufacturer =manufacturer;
+        this.manufacturer = manufacturer;
         this.price = price;
     }
-
 
     public String getModel() {
         return model;
@@ -30,6 +29,7 @@ public class CellPhone {
         return price;
     }
 
+    //выводим на экран все данные одного телефона
     @Override
     public String toString() {
         return "CellPhone{" +
@@ -42,20 +42,21 @@ public class CellPhone {
     /*
     массив с информацией объектов
      */
-    public CellPhone[] phonesArray(){
+    public CellPhone[] phonesArray() {
         CellPhone[] arrayCallPhone = new CellPhone[5];
-        arrayCallPhone[0] = new CellPhone("Galaxy A15", "Samsung",179);
-        arrayCallPhone[1] = new CellPhone("Readmi 13C", "Xiaomi",115);
-        arrayCallPhone[2] = new CellPhone("iPhone 14Pro", "Apple",1049);
-        arrayCallPhone[3] = new CellPhone("edge40", "Motorola",345);
-        arrayCallPhone[4] = new CellPhone("Refurbished Pixel 7 Pro", "Google",849);
+        arrayCallPhone[0] = new CellPhone("Galaxy A15", "Samsung", 179);
+        arrayCallPhone[1] = new CellPhone("Readmi 13C", "Xiaomi", 115);
+        arrayCallPhone[2] = new CellPhone("iPhone 14Pro", "Apple", 1049);
+        arrayCallPhone[3] = new CellPhone("edge40", "Motorola", 345);
+        arrayCallPhone[4] = new CellPhone("Refurbished Pixel 7 Pro", "Google", 849);
         return arrayCallPhone;
     }
-     /*
-     выводим информацию из массивов о телефонах
-      */
-    public void phonesInfo(CellPhone[] arrayPhones){
-        for(CellPhone phone : arrayPhones){
+
+    /*
+    выводим информацию из массивов о телефонах
+     */
+    public void phonesInfo(CellPhone[] arrayPhones) {
+        for (CellPhone phone : arrayPhones) {
             System.out.println(phone.toString());
         }
     }
