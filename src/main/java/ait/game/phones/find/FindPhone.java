@@ -2,10 +2,15 @@ package ait.game.phones.find;
 
 import ait.game.phones.phone.CellPhone;
 
+import java.util.Scanner;
+
 public class FindPhone {
     public static void main(String[] args) {
         CellPhone cellPhone = new CellPhone();
-        findPhoneByModel(cellPhone.phonesArray(), "iPhone 14Pro");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter phone model: ");
+        String modelPhone = scanner.nextLine();
+        findPhoneByModel(cellPhone.phonesArray(), modelPhone);
     }
 
     public static void findPhoneByModel(CellPhone[] allPhone, String modelPhone) {
